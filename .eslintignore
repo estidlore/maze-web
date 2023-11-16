@@ -1,0 +1,10 @@
+src/**/*.css.d.ts
+src/**/*.d.ts
+.eslintrc.js
+.vscode
+build
+node_modules
+package.json
+package-lock.json
+tsconfig.json
+webpack.config.js

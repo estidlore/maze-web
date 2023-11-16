@@ -1,0 +1,16 @@
+{
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    {
+      "color": "#808080",
+      "column": 80,
+    },
+  ],
+  "editor.tabSize": 2,
+  "eslint.workingDirectories": [
+    "./src"
+  ],
+  "typescript.validate.enable": true
+}
