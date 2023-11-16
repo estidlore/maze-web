@@ -15,7 +15,7 @@
     "noEmit": false,
     "noUnusedLocals": false,
     "noUnusedParameters": true,
-    "outDir": "dist",
+    "outDir": "build",
     "removeComments": true,
     "resolveJsonModule": true,
     "rootDir": ".",

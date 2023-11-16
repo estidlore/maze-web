@@ -60,7 +60,7 @@ module.exports = ({ ENV = "development" }) => ({
   },
   output: {
     filename: "[name].[contenthash].js",
-    path: __dirname + "/dist",
+    path: __dirname + "/build",
   },
   plugins: [
     new HtmlWebpackPlugin({
