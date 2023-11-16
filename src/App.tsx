@@ -25,7 +25,7 @@ const App = (): JSX.Element => {
     return { h: 0.9 * windowSize.h, w: 0.9 * windowSize.w };
   }, [windowSize]);
 
-  const [size, setSize] = useState<keyof typeof mazeOptions>("small");
+  const [size, setSize] = useState<keyof typeof mazeOptions>("large");
   const onSelectSize = useCallback(
     (ev: React.ChangeEvent<HTMLSelectElement>) => {
       setSize(ev.target.value as keyof typeof mazeOptions);
@@ -43,10 +43,10 @@ const App = (): JSX.Element => {
         w: Math.round(k * canvasSize.w),
       };
 
+      const generator = new MazeGenerator(mazeSize);
+      const drawer = new MazeDrawer(generator.maze, canvas);
       let cancel = false;
       (async () => {
-        const generator = new MazeGenerator(mazeSize);
-        const drawer = new MazeDrawer(generator.maze, canvas);
         while (generator.nextStep() && !cancel) {
           drawer.draw();
           generator.edges.forEach((edge) => {

@@ -47,7 +47,7 @@
   "name": "maze-web",
   "scripts": {
     "build": "rm -rf ./build && webpack-cli --env ENV=production",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "format": "prettier --config .prettierrc.js --write src/**/*.{ts,tsx,scss}",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "predeploy": "npm run build",
